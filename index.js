@@ -7,3 +7,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true,
 }))
+
+app.get('/',(request,response) => {
+    response.json({ info: 'Node.js ,Express, and postgres API'})
+
+})
+
+app.listen(port,() =>{
+    console.log('App is running on ' + port)
+})
